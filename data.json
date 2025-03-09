@@ -16,7 +16,7 @@
   {
     "id": "21:22",
     "name": "favorite",
-    "group": "ê¸°í",
+    "group": "ÃªÂ¸Â°Ã­ÂÂ",
     "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/966adfc6-7983-4de5-835f-97833a52a377",
     "originalName": "favorite",
     "transformedNames": {
@@ -26,5 +26,19 @@
     },
     "status": "approved",
     "componentSetName": "SystemIcon2"
+  },
+  {
+    "id": "1:136",
+    "name": "filter",
+    "group": "기타",
+    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/793f28e2-fc73-4c8b-ac0f-a5210700c3ae",
+    "originalName": "filter",
+    "transformedNames": {
+      "withPrefix": "filter",
+      "withSuffix": "filter",
+      "withBoth": "filter"
+    },
+    "status": "approved",
+    "componentSetName": "SystemIcon"
   }
 ]
