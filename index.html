@@ -3,43 +3,557 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>디자인 시스템 갤러리</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>아이콘 갤러리</title>
+  <style>
+    /* 기본 스타일 */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f9fa;
+      padding: 20px;
+    }
+    
+    /* 컨테이너 */
+    .design-system-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    
+    /* 헤더 */
+    .ds-header {
+      padding: 24px;
+      background-color: #f1f5f9;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    
+    .ds-header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 8px;
+    }
+    
+    .ds-metadata {
+      display: flex;
+      gap: 16px;
+      font-size: 14px;
+      color: #64748b;
+    }
+    
+    /* 검색 및 필터 */
+    .ds-controls {
+      padding: 16px 24px;
+      background-color: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+    
+    .ds-search {
+      flex: 1;
+      min-width: 250px;
+      position: relative;
+    }
+    
+    .ds-search input {
+      width: 100%;
+      padding: 8px 16px;
+      padding-left: 36px;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    
+    .ds-search input:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    }
+    
+    .ds-search::before {
+      content: '';
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    
+    .ds-filter {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    
+    .ds-filter select {
+      padding: 8px 12px;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      font-size: 14px;
+      outline: none;
+      background-color: white;
+      cursor: pointer;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    
+    .ds-filter select:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    }
+    
+    .ds-filter label {
+      font-size: 14px;
+      color: #64748b;
+    }
+    
+    /* 콘텐츠 */
+    .ds-content {
+      padding: 24px;
+    }
+    
+    /* 섹션 */
+    .ds-section {
+      margin-bottom: 32px;
+    }
+    
+    .ds-section h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .ds-count-badge {
+      background-color: #e2e8f0;
+      color: #475569;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 16px;
+    }
+    
+    /* 아이콘 갤러리 */
+    .icon-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+    }
+    
+    /* 아이콘 카드 */
+    .icon-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      background-color: #fff;
+    }
+    
+    .icon-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .icon-preview {
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      background-color: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    
+    .icon-preview img, .icon-preview svg {
+      max-width: 64px;
+      max-height: 64px;
+    }
+    
+    .svg-container svg {
+      width: 64px;
+      height: 64px;
+    }
+    
+    .icon-placeholder {
+      width: 64px;
+      height: 64px;
+      background-color: #e2e8f0;
+      color: #64748b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 600;
+      border-radius: 8px;
+    }
+    
+    .icon-info {
+      padding: 12px 16px;
+    }
+    
+    .icon-name {
+      font-size: 16px;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    .icon-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+    
+    .icon-group, .icon-component-set {
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+    
+    .icon-group {
+      background-color: #e0f2fe;
+      color: #0369a1;
+    }
+    
+    .icon-component-set {
+      background-color: #f0fdf4;
+      color: #166534;
+    }
+    
+    .icon-id {
+      font-size: 12px;
+      color: #94a3b8;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    /* 복사 버튼 */
+    .copy-button {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    
+    .icon-card:hover .copy-button {
+      opacity: 1;
+    }
+    
+    .copy-button:hover {
+      background-color: #f1f5f9;
+    }
+    
+    .copy-button svg {
+      width: 16px;
+      height: 16px;
+      color: #64748b;
+    }
+    
+    /* 빈 상태 */
+    .empty-state {
+      padding: 48px 24px;
+      text-align: center;
+      color: #64748b;
+    }
+    
+    .empty-state h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #334155;
+    }
+    
+    .empty-state p {
+      font-size: 14px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    
+    /* 반응형 */
+    @media (max-width: 768px) {
+      .icon-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+      
+      .ds-controls {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .icon-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      }
+      
+      .ds-header {
+        padding: 16px;
+      }
+      
+      .ds-content {
+        padding: 16px;
+      }
+    }
+    
+    /* 로딩 상태 */
+    .loading {
+      display: none;
+      text-align: center;
+      padding: 24px;
+      color: #64748b;
+    }
+    
+    .loading.active {
+      display: block;
+    }
+    
+    /* 스크롤 버튼 */
+    .scroll-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 40px;
+      height: 40px;
+      background-color: #3b82f6;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+    
+    .scroll-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .scroll-top:hover {
+      background-color: #2563eb;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>디자인 시스템 갤러리</h1>
-      <nav>
-        <ul>
-          <li><a href="icons/">아이콘 갤러리</a></li>
-          <!-- 추후 다른 갤러리 추가 가능 -->
-        </ul>
-      </nav>
+<div class="design-system-container">
+  <header class="ds-header">
+    <h1>아이콘 갤러리</h1>
+    <div class="ds-metadata">
+      <span class="ds-update-date">마지막 업데이트: 2025. 3. 9.</span>
+      <span class="ds-count">총 아이콘 수: 2</span>
     </div>
   </header>
   
-  <main class="container">
-    <section class="intro">
-      <h2>우리 회사의 디자인 시스템</h2>
-      <p>이 갤러리는 디자인 시스템의 시각적 요소를 탐색하고 사용하기 위한 리소스입니다.</p>
-      <div class="cta-buttons">
-        <a href="icons/" class="btn btn-primary">아이콘 갤러리 보기</a>
+  <div class="ds-controls">
+    <div class="ds-search">
+      <input type="text" id="icon-search" placeholder="아이콘 검색..." />
+    </div>
+    
+    <div class="ds-filter">
+      <label for="group-filter">그룹:</label>
+      <select id="group-filter">
+        <option value="all">모든 그룹</option>
+        <option value="기타">기타</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="ds-content">
+    <section class="ds-section" data-group="기타">
+      <h2>기타 <span class="ds-count-badge">2</span></h2>
+      
+      <div class="icon-gallery">
+        <div class="icon-card" data-name="favorite" data-group="기타" data-component-set="SystemIcon">
+          <div class="icon-preview">
+            <img alt="favorite" class="icon-image" src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/03fdc3d1-5821-4d7a-9eea-85881db6732a">
+            <button class="copy-button" title="SVG 복사" data-svg="https%3A%2F%2Ffigma-alpha-api.s3.us-west-2.amazonaws.com%2Fimages%2F03fdc3d1-5821-4d7a-9eea-85881db6732a">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="icon-info">
+            <div class="icon-name">favorite</div>
+            <div class="icon-meta">
+              <span class="icon-group" title="그룹">기타</span>
+              <span class="icon-component-set" title="컴포넌트 세트">SystemIcon</span>
+            </div>
+            <div class="icon-id">1:132</div>
+          </div>
+        </div>
+        <div class="icon-card" data-name="favorite" data-group="기타" data-component-set="SystemIcon2">
+          <div class="icon-preview">
+            <img alt="favorite" class="icon-image" src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/966adfc6-7983-4de5-835f-97833a52a377">
+            <button class="copy-button" title="SVG 복사" data-svg="https%3A%2F%2Ffigma-alpha-api.s3.us-west-2.amazonaws.com%2Fimages%2F966adfc6-7983-4de5-835f-97833a52a377">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="icon-info">
+            <div class="icon-name">favorite</div>
+            <div class="icon-meta">
+              <span class="icon-group" title="그룹">기타</span>
+              <span class="icon-component-set" title="컴포넌트 세트">SystemIcon2</span>
+            </div>
+            <div class="icon-id">21:22</div>
+          </div>
+        </div>
       </div>
     </section>
-    
-    <section class="updates">
-      <h3>최근 업데이트</h3>
-      <p>마지막 업데이트: <span id="last-updated">2023년 11월</span></p>
-    </section>
-  </main>
-  
-  <footer>
-    <div class="container">
-      <p>&copy; 2023 회사명. All rights reserved.</p>
+    <div class="empty-state" id="empty-search" style="display: none;">
+      <h3>검색 결과가 없습니다</h3>
+      <p>다른 검색어나 필터를 시도해보세요.</p>
     </div>
-  </footer>
+  </div>
+</div>
 
-  <script src="js/main.js"></script>
+<button class="scroll-top" id="scroll-top" title="맨 위로 스크롤">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+
+<script>
+  // 디버깅 정보 출력
+  console.log('아이콘 갤러리가 로드되었습니다.');
+  console.log('총 아이콘 수:', 2);
+  
+  // 검색 기능
+  const searchInput = document.getElementById('icon-search');
+  const groupFilter = document.getElementById('group-filter');
+  const iconCards = document.querySelectorAll('.icon-card');
+  const sections = document.querySelectorAll('.ds-section');
+  const emptySearch = document.getElementById('empty-search');
+  const scrollTopButton = document.getElementById('scroll-top');
+  
+  // 검색 및 필터링 함수
+  function filterIcons() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const selectedGroup = groupFilter.value;
+    
+    let visibleCount = 0;
+    
+    // 섹션 표시 여부를 추적하는 객체
+    const sectionVisibility = {};
+    sections.forEach(section => {
+      sectionVisibility[section.dataset.group] = false;
+    });
+    
+    // 각 아이콘 카드 필터링
+    iconCards.forEach(card => {
+      const name = card.dataset.name;
+      const group = card.dataset.group;
+      const componentSet = card.dataset.componentSet;
+      
+      // 검색어와 그룹 필터 모두 적용
+      const matchesSearch = name.includes(searchTerm);
+      const matchesGroup = selectedGroup === 'all' || group === selectedGroup;
+      
+      if (matchesSearch && matchesGroup) {
+        card.style.display = '';
+        visibleCount++;
+        
+        // 해당 섹션 표시 설정
+        sectionVisibility[group] = true;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    
+    // 섹션 표시 여부 적용
+    sections.forEach(section => {
+      section.style.display = sectionVisibility[section.dataset.group] ? '' : 'none';
+    });
+    
+    // 검색 결과가 없을 때 메시지 표시
+    emptySearch.style.display = visibleCount === 0 ? 'block' : 'none';
+  }
+  
+  // 이벤트 리스너 등록
+  searchInput.addEventListener('input', filterIcons);
+  groupFilter.addEventListener('change', filterIcons);
+  
+  // SVG 복사 기능
+  document.querySelectorAll('.copy-button').forEach(button => {
+    button.addEventListener('click', function() {
+      const svgData = decodeURIComponent(this.dataset.svg);
+      if (svgData) {
+        navigator.clipboard.writeText(svgData)
+          .then(() => {
+            // 복사 성공 표시
+            const originalTitle = this.title;
+            this.title = '복사됨!';
+            setTimeout(() => {
+              this.title = originalTitle;
+            }, 2000);
+          })
+          .catch(err => {
+            console.error('SVG 복사 실패:', err);
+          });
+      }
+    });
+  });
+  
+  // 스크롤 버튼
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+      scrollTopButton.classList.add('visible');
+    } else {
+      scrollTopButton.classList.remove('visible');
+    }
+  });
+  
+  scrollTopButton.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
 </body>
 </html>
