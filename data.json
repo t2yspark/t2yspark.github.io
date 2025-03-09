@@ -1,9 +1,9 @@
 [
   {
-    "id": "1:132",
+    "id": "21:22",
     "name": "favorite",
     "group": "기타",
-    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/03fdc3d1-5821-4d7a-9eea-85881db6732a",
+    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/966adfc6-7983-4de5-835f-97833a52a377",
     "originalName": "favorite",
     "transformedNames": {
       "withPrefix": "favorite",
@@ -11,12 +11,12 @@
       "withBoth": "favorite"
     },
     "status": "approved",
-    "componentSetName": "SystemIcon"
+    "componentSetName": "SystemIcon2"
   },
   {
     "id": "21:22",
     "name": "favorite",
-    "group": "기타",
+    "group": "ê¸°í",
     "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/966adfc6-7983-4de5-835f-97833a52a377",
     "originalName": "favorite",
     "transformedNames": {
