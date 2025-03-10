@@ -1,30 +1,16 @@
 [
   {
-    "id": "21:14",
-    "name": "search",
+    "id": "1:128",
+    "name": "list",
     "group": "기타",
-    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ea56c2c2-d4a3-40a9-8dcd-100b2a352e28",
-    "originalName": "search",
+    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ce5686e8-0770-452e-aba7-975ada0c3db8",
+    "originalName": "list",
     "transformedNames": {
-      "withPrefix": "search",
-      "withSuffix": "search",
-      "withBoth": "search"
+      "withPrefix": "list",
+      "withSuffix": "list",
+      "withBoth": "list"
     },
     "status": "approved",
-    "componentSetName": "SystemIcon2"
-  },
-  {
-    "id": "21:20",
-    "name": "favorite-o",
-    "group": "favorite",
-    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/452f075a-fa58-4635-a40a-5eaaebe976e9",
-    "originalName": "favorite-o",
-    "transformedNames": {
-      "withPrefix": "favorite-o",
-      "withSuffix": "favorite-o",
-      "withBoth": "favorite-o"
-    },
-    "status": "approved",
-    "componentSetName": "SystemIcon2"
+    "componentSetName": "SystemIcon"
   }
 ]
