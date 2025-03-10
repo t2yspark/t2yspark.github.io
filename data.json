@@ -1,30 +1,30 @@
 [
   {
-    "id": "21:22",
-    "name": "favorite",
+    "id": "21:14",
+    "name": "search",
     "group": "기타",
-    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/966adfc6-7983-4de5-835f-97833a52a377",
-    "originalName": "favorite",
+    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ea56c2c2-d4a3-40a9-8dcd-100b2a352e28",
+    "originalName": "search",
     "transformedNames": {
-      "withPrefix": "favorite",
-      "withSuffix": "favorite",
-      "withBoth": "favorite"
+      "withPrefix": "search",
+      "withSuffix": "search",
+      "withBoth": "search"
     },
     "status": "approved",
     "componentSetName": "SystemIcon2"
   },
   {
-    "id": "1:136",
-    "name": "filter",
-    "group": "기타",
-    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/793f28e2-fc73-4c8b-ac0f-a5210700c3ae",
-    "originalName": "filter",
+    "id": "21:20",
+    "name": "favorite-o",
+    "group": "favorite",
+    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/452f075a-fa58-4635-a40a-5eaaebe976e9",
+    "originalName": "favorite-o",
     "transformedNames": {
-      "withPrefix": "filter",
-      "withSuffix": "filter",
-      "withBoth": "filter"
+      "withPrefix": "favorite-o",
+      "withSuffix": "favorite-o",
+      "withBoth": "favorite-o"
     },
     "status": "approved",
-    "componentSetName": "SystemIcon"
+    "componentSetName": "SystemIcon2"
   }
 ]
