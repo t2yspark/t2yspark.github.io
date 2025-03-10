@@ -12,5 +12,19 @@
     },
     "status": "approved",
     "componentSetName": "SystemIcon"
+  },
+  {
+    "id": "21:14",
+    "name": "search",
+    "group": "기타",
+    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ea56c2c2-d4a3-40a9-8dcd-100b2a352e28",
+    "originalName": "search",
+    "transformedNames": {
+      "withPrefix": "search",
+      "withSuffix": "search",
+      "withBoth": "search"
+    },
+    "status": "approved",
+    "componentSetName": "SystemIcon2"
   }
 ]
