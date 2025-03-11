@@ -30,8 +30,8 @@
   {
     "id": "1:34",
     "name": "favorite-o",
-    "group": "fa",
-    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f1f3e6f2-a5f4-43f6-a538-504cbfb7f8ba",
+    "group": "기타",
+    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/111a3145-daea-4f72-8824-ff5cfa15d8e3",
     "originalName": "favorite-o",
     "transformedNames": {
       "withPrefix": "favorite-o",
