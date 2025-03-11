@@ -2,7 +2,7 @@
   {
     "id": "1:128",
     "name": "list",
-    "group": "기타",
+    "group": "",
     "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ce5686e8-0770-452e-aba7-975ada0c3db8",
     "originalName": "list",
     "transformedNames": {
@@ -40,5 +40,19 @@
     },
     "status": "approved",
     "componentSetName": "SystemIcon"
+  },
+  {
+    "id": "21:18",
+    "name": "list",
+    "group": "",
+    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/85e50d75-914e-463b-a132-f5a2d43214f0",
+    "originalName": "list",
+    "transformedNames": {
+      "withPrefix": "list",
+      "withSuffix": "list",
+      "withBoth": "list"
+    },
+    "status": "approved",
+    "componentSetName": "SystemIcon2"
   }
 ]
