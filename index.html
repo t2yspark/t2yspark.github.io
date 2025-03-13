@@ -160,16 +160,19 @@
     .icon-gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 16px;
+      gap: 20px;
     }
     
     /* 아이콘 카드 */
     .icon-card {
       border: 1px solid #e2e8f0;
-      border-radius: 8px;
+      border-radius: 10px;
       overflow: hidden;
       transition: transform 0.2s, box-shadow 0.2s;
       background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
     
     .icon-card:hover {
@@ -178,41 +181,47 @@
     }
     
     .icon-preview {
-      height: 120px;
+      height: 140px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #f8fafc;
+      background-color: #f9fafb;
       border-bottom: 1px solid #e2e8f0;
       position: relative;
+      padding: 20px;
+      box-sizing: border-box;
+      width: 100%;
+      flex-grow: 0;
     }
     
     .icon-image {
-      max-width: 60%;
-      max-height: 60%;
+      max-width: 70%;
+      max-height: 70%;
       object-fit: contain;
     }
     
     .svg-container {
-      width: 48px;
-      height: 48px;
+      width: 64px;
+      height: 64px;
       display: flex;
       align-items: center;
       justify-content: center;
+      background-color: transparent;
     }
     
     .svg-container svg {
       width: 100%;
       height: 100%;
+      color: #334155;
     }
     
     .icon-placeholder {
-      width: 48px;
-      height: 48px;
+      width: 64px;
+      height: 64px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #e2e8f0;
+      background-color: #f1f5f9;
       border-radius: 8px;
       font-size: 20px;
       font-weight: 600;
@@ -220,14 +229,17 @@
     }
     
     .icon-info {
-      padding: 12px;
+      padding: 16px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
     }
     
     .icon-name {
       font-size: 16px;
       font-weight: 600;
       color: #334155;
-      margin-bottom: 4px;
+      margin-bottom: 8px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -236,32 +248,35 @@
     .icon-meta {
       display: flex;
       flex-wrap: wrap;
-      gap: 4px;
-      margin-bottom: 4px;
+      gap: 6px;
+      margin-bottom: 8px;
+      flex-grow: 1;
     }
     
     .icon-group {
       font-size: 12px;
       background-color: #e0f2fe;
       color: #0369a1;
-      padding: 2px 6px;
+      padding: 3px 8px;
       border-radius: 4px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       max-width: 100%;
+      font-weight: 500;
     }
     
     .icon-component-set {
       font-size: 12px;
       background-color: #f3e8ff;
       color: #7e22ce;
-      padding: 2px 6px;
+      padding: 3px 8px;
       border-radius: 4px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       max-width: 100%;
+      font-weight: 500;
     }
     
     .icon-id {
@@ -270,32 +285,35 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      margin-top: auto;
     }
     
     /* 복사 버튼 */
     .copy-button {
       position: absolute;
-      top: 8px;
-      right: 8px;
-      width: 28px;
-      height: 28px;
-      border-radius: 4px;
+      top: 10px;
+      right: 10px;
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
       background-color: white;
       border: 1px solid #e2e8f0;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      transition: background-color 0.2s;
+      transition: background-color 0.2s, transform 0.2s;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
     
     .copy-button:hover {
       background-color: #f1f5f9;
+      transform: scale(1.05);
     }
     
     .copy-button svg {
-      width: 16px;
-      height: 16px;
+      width: 18px;
+      height: 18px;
       color: #64748b;
     }
     
@@ -392,8 +410,8 @@
   <header class="ds-header">
     <h1>아이콘 갤러리</h1>
     <div class="ds-metadata">
-      <span class="ds-update-date">마지막 업데이트: 2025. 3. 11.</span>
-      <span class="ds-count">총 아이콘 수: 4</span>
+      <span class="ds-update-date">마지막 업데이트: 2025. 3. 13.</span>
+      <span class="ds-count">총 아이콘 수: 2</span>
     </div>
   </header>
   
@@ -406,64 +424,14 @@
   </div>
 
   <div class="ds-content">
-    <section class="ds-section" data-group="list">
-      <h2>list <span class="ds-count-badge">1</span></h2>
-      
-      <div class="icon-gallery">
-        <div class="icon-card" data-name="list" data-group="list" data-component-set="SystemIcon">
-          <div class="icon-preview">
-            <img alt="list" class="icon-image" src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ce5686e8-0770-452e-aba7-975ada0c3db8">
-            <button class="copy-button" title="SVG 복사" data-svg="https%3A%2F%2Ffigma-alpha-api.s3.us-west-2.amazonaws.com%2Fimages%2Fce5686e8-0770-452e-aba7-975ada0c3db8">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-              </svg>
-            </button>
-          </div>
-          <div class="icon-info">
-            <div class="icon-name">list</div>
-            <div class="icon-meta">
-              
-              <span class="icon-component-set" title="컴포넌트 세트">SystemIcon</span>
-            </div>
-            <div class="icon-id">1:128</div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="ds-section" data-group="기타">
-      <h2>기타 <span class="ds-count-badge">1</span></h2>
-      
-      <div class="icon-gallery">
-        <div class="icon-card" data-name="search" data-group="기타" data-component-set="SystemIcon2">
-          <div class="icon-preview">
-            <img alt="search" class="icon-image" src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ea56c2c2-d4a3-40a9-8dcd-100b2a352e28">
-            <button class="copy-button" title="SVG 복사" data-svg="https%3A%2F%2Ffigma-alpha-api.s3.us-west-2.amazonaws.com%2Fimages%2Fea56c2c2-d4a3-40a9-8dcd-100b2a352e28">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-              </svg>
-            </button>
-          </div>
-          <div class="icon-info">
-            <div class="icon-name">search</div>
-            <div class="icon-meta">
-              
-              <span class="icon-component-set" title="컴포넌트 세트">SystemIcon2</span>
-            </div>
-            <div class="icon-id">21:14</div>
-          </div>
-        </div>
-      </div>
-    </section>
     <section class="ds-section" data-group="전체">
-      <h2>전체 <span class="ds-count-badge">1</span></h2>
+      <h2>전체 <span class="ds-count-badge">2</span></h2>
       
       <div class="icon-gallery">
-        <div class="icon-card" data-name="favorite-o" data-group="전체" data-component-set="SystemIcon">
+        <div class="icon-card" data-name="favorite" data-group="전체" data-component-set="SystemIcon2">
           <div class="icon-preview">
-            <img alt="favorite-o" class="icon-image" src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/111a3145-daea-4f72-8824-ff5cfa15d8e3">
-            <button class="copy-button" title="SVG 복사" data-svg="https%3A%2F%2Ffigma-alpha-api.s3.us-west-2.amazonaws.com%2Fimages%2F111a3145-daea-4f72-8824-ff5cfa15d8e3">
+            <img alt="favorite" class="icon-image" src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/bce693c2-5497-4bfe-bb46-e70170e86f88">
+            <button class="copy-button" title="SVG 복사" data-svg="https%3A%2F%2Ffigma-alpha-api.s3.us-west-2.amazonaws.com%2Fimages%2Fbce693c2-5497-4bfe-bb46-e70170e86f88">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
@@ -471,37 +439,31 @@
             </button>
           </div>
           <div class="icon-info">
-            <div class="icon-name">favorite-o</div>
-            <div class="icon-meta">
-              
-              <span class="icon-component-set" title="컴포넌트 세트">SystemIcon</span>
-            </div>
-            <div class="icon-id">1:34</div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="ds-section" data-group="미분류">
-      <h2>미분류 <span class="ds-count-badge">1</span></h2>
-      
-      <div class="icon-gallery">
-        <div class="icon-card" data-name="list" data-group="미분류" data-component-set="SystemIcon2">
-          <div class="icon-preview">
-            <img alt="list" class="icon-image" src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/85e50d75-914e-463b-a132-f5a2d43214f0">
-            <button class="copy-button" title="SVG 복사" data-svg="https%3A%2F%2Ffigma-alpha-api.s3.us-west-2.amazonaws.com%2Fimages%2F85e50d75-914e-463b-a132-f5a2d43214f0">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-              </svg>
-            </button>
-          </div>
-          <div class="icon-info">
-            <div class="icon-name">list</div>
+            <div class="icon-name">favorite</div>
             <div class="icon-meta">
               
               <span class="icon-component-set" title="컴포넌트 세트">SystemIcon2</span>
             </div>
-            <div class="icon-id">21:18</div>
+            <div class="icon-id">21:22</div>
+          </div>
+        </div>
+        <div class="icon-card" data-name="filter" data-group="전체" data-component-set="SystemIcon">
+          <div class="icon-preview">
+            <img alt="filter" class="icon-image" src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c54154f9-b0b9-427b-b087-970f4174590e">
+            <button class="copy-button" title="SVG 복사" data-svg="https%3A%2F%2Ffigma-alpha-api.s3.us-west-2.amazonaws.com%2Fimages%2Fc54154f9-b0b9-427b-b087-970f4174590e">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="icon-info">
+            <div class="icon-name">filter</div>
+            <div class="icon-meta">
+              
+              <span class="icon-component-set" title="컴포넌트 세트">SystemIcon</span>
+            </div>
+            <div class="icon-id">1:136</div>
           </div>
         </div>
       </div>
@@ -522,7 +484,7 @@
 <script>
   // 디버깅 정보 출력
   console.log('아이콘 갤러리가 로드되었습니다.');
-  console.log('총 아이콘 수:', 4);
+  console.log('총 아이콘 수:', 2);
   
   // 검색 기능
   const searchInput = document.getElementById('icon-search');
