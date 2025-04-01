@@ -1,30 +1,16 @@
 [
   {
-    "id": "21:22",
-    "name": "favorite",
+    "id": "21:12",
+    "name": "search-o",
     "group": "전체",
-    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/bce693c2-5497-4bfe-bb46-e70170e86f88",
-    "originalName": "favorite",
+    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8cf439f0-e90c-4025-9758-0a77ff8ba78e",
+    "originalName": "search-o",
     "transformedNames": {
-      "withPrefix": "favorite",
-      "withSuffix": "favorite",
-      "withBoth": "favorite"
+      "withPrefix": "search-o",
+      "withSuffix": "search-o-active",
+      "withBoth": "search-o"
     },
     "status": "approved",
     "componentSetName": "SystemIcon2"
-  },
-  {
-    "id": "1:136",
-    "name": "filter",
-    "group": "전체",
-    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c54154f9-b0b9-427b-b087-970f4174590e",
-    "originalName": "filter",
-    "transformedNames": {
-      "withPrefix": "filter",
-      "withSuffix": "filter",
-      "withBoth": "filter"
-    },
-    "status": "approved",
-    "componentSetName": "SystemIcon"
   }
 ]
