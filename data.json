@@ -1,14 +1,14 @@
 [
   {
-    "id": "1:14",
-    "name": "home-o",
+    "id": "1:125",
+    "name": "search",
     "group": "전체",
-    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/bc5d85b0-dd49-4617-85d8-c052870380cb",
-    "originalName": "home-o",
+    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/916f1722-861b-4325-9d0c-390c1d5ea342",
+    "originalName": "search",
     "transformedNames": {
-      "withPrefix": "home-o",
-      "withSuffix": "home-o-active",
-      "withBoth": "home-o"
+      "withPrefix": "search",
+      "withSuffix": "search-active",
+      "withBoth": "search"
     },
     "status": "approved",
     "componentSetName": "SystemIcon"
