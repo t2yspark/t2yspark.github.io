@@ -256,7 +256,7 @@
       
       // 아이콘 그리드 렌더링 함수
       function renderIcons(icons) {
-        if (icons.length === 0) {
+  if (icons.length === 0) {
           iconContainer.innerHTML = '<div class="no-icons">표시할 아이콘이 없습니다.</div>';
           return;
         }
@@ -276,15 +276,15 @@
         
         let html = '';
         
-        sortedGroups.forEach(group => {
-          const groupIcons = groupedIcons[group];
-          
+    sortedGroups.forEach(group => {
+      const groupIcons = groupedIcons[group];
+      
           html += `
           <section>
             <h2 class="group-title">${group} <span>(${groupIcons.length})</span></h2>
             <div class="icon-grid">`;
-          
-          groupIcons.forEach(icon => {
+      
+      groupIcons.forEach(icon => {
             // SVG 렌더링
             let iconPreview = '';
             if (icon.svg) {
@@ -293,22 +293,22 @@
               } else if (icon.svg.startsWith('http')) {
                 iconPreview = `<img class="icon-image" src="${icon.svg}" alt="${icon.name}">`;
               }
-            } else {
+        } else {
               iconPreview = `<div class="icon-placeholder">${icon.name.charAt(0)}</div>`;
-            }
-            
+        }
+        
             html += `
             <div class="icon-card" data-name="${icon.name.toLowerCase()}" data-group="${icon.group || '기타'}">
-              <div class="icon-preview">
+          <div class="icon-preview">
                 ${iconPreview}
-              </div>
-              <div class="icon-info">
+          </div>
+          <div class="icon-info">
                 <div class="icon-name">${icon.name}</div>
-                <div class="icon-meta">
+            <div class="icon-meta">
                   <span class="icon-group">${icon.group || '기타'}</span>
                   ${icon.componentSetName ? `<span class="icon-component-set">${icon.componentSetName}</span>` : ''}
-                </div>
-              </div>
+            </div>
+          </div>
             </div>`;
           });
           
@@ -348,4 +348,4 @@
     });
   </script>
 </body>
-</html>
+</html>  
