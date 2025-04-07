@@ -40,5 +40,19 @@
     },
     "status": "approved",
     "componentSetName": "SystemIcon"
+  },
+  {
+    "id": "1:123",
+    "name": "home",
+    "group": "전체",
+    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0b06fd46-7063-4589-816c-6919205b1c46",
+    "originalName": "home",
+    "transformedNames": {
+      "withPrefix": "home",
+      "withSuffix": "home-active",
+      "withBoth": "home"
+    },
+    "status": "approved",
+    "componentSetName": "SystemIcon"
   }
 ]
