@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1:132",
+    "name": "favorite",
+    "group": "전체",
+    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/78249e71-2ec7-4dac-bc50-5b8dea8b1731",
+    "originalName": "favorite",
+    "transformedNames": {
+      "withPrefix": "favorite",
+      "withSuffix": "favorite-active",
+      "withBoth": "favorite"
+    },
+    "status": "approved",
+    "componentSetName": "SystemIcon"
+  },
+  {
+    "id": "1:136",
+    "name": "filter",
+    "group": "전체",
+    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d6e43dc5-638a-4194-8cdb-5c7fa6280740",
+    "originalName": "filter",
+    "transformedNames": {
+      "withPrefix": "filter",
+      "withSuffix": "filter-active",
+      "withBoth": "filter"
+    },
+    "status": "approved",
+    "componentSetName": "SystemIcon"
+  }
+]
