@@ -1,1 +1,44 @@
-[{"id":"1:34","name":"favorite-o","group":"전체","svgData":"https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/978bbbac-6ef6-471f-8ddd-27b21c6ad368","originalName":"variants=favorite-o","transformedNames":{"withPrefix":"favorite-o","withSuffix":"favorite-o","withBoth":"favorite-o"},"status":"approved","componentSetName":""},{"id":"1:132","name":"favorite","group":"전체","svgData":"https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/75c3eaaa-3d0b-48f0-ba74-415d538d2e17","originalName":"variants=favorite","transformedNames":{"withPrefix":"favorite","withSuffix":"favorite","withBoth":"favorite"},"status":"approved","componentSetName":""}]
+[
+  {
+    "id": "1:132",
+    "name": "favorite",
+    "group": "전체",
+    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/75c3eaaa-3d0b-48f0-ba74-415d538d2e17",
+    "originalName": "favorite",
+    "transformedNames": {
+      "withPrefix": "favorite",
+      "withSuffix": "favorite-active",
+      "withBoth": "favorite"
+    },
+    "status": "approved",
+    "componentSetName": "SystemIcon"
+  },
+  {
+    "id": "1:34",
+    "name": "favorite-o",
+    "group": "전체",
+    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/978bbbac-6ef6-471f-8ddd-27b21c6ad368",
+    "originalName": "favorite-o",
+    "transformedNames": {
+      "withPrefix": "favorite-o",
+      "withSuffix": "favorite-o-active",
+      "withBoth": "favorite-o"
+    },
+    "status": "approved",
+    "componentSetName": "SystemIcon"
+  },
+  {
+    "id": "1:136",
+    "name": "filter",
+    "group": "전체",
+    "svgData": "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/94757152-7adb-4664-bcf3-9062d145004b",
+    "originalName": "filter",
+    "transformedNames": {
+      "withPrefix": "filter",
+      "withSuffix": "filter-active",
+      "withBoth": "filter"
+    },
+    "status": "approved",
+    "componentSetName": "SystemIcon"
+  }
+]
